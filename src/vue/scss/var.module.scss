@@ -1,0 +1,7 @@
+// 定义变量
+$theme: #ff5c00;
+$size: 16px;
+:export {
+  theme: $theme;
+  size:$size;
+}
