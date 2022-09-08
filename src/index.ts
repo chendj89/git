@@ -1,3 +1,4 @@
+import init from "./command/init";
 import { program } from "commander";
 import { tipsArray, tipsObject } from "./tips";
 import { rm } from "./utils/common";
@@ -20,6 +21,12 @@ program
     if (["obj", "object", "Object"].includes(methodName)) {
       tipsObject();
     }
+  });
+program
+  .command("init <dirName>")
+  .description("初始化目录")
+  .action(async (dirName: string) => {
+    init(dirName);
   });
 
 program
